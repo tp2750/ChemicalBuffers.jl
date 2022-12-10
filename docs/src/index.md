@@ -7,6 +7,11 @@ CurrentModule = ChemicalBuffers
 Documentation for [ChemicalBuffers](https://github.com/tp2750/ChemicalBuffers.jl).
 
 ```@index
+Pages = [
+        "index.md",
+        "tutorial.md",
+        "design.md",
+    ]
 ```
 
 ```@autodocs
