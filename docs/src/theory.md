@@ -29,6 +29,7 @@ Overview:
 
 ## Notation
 
+$$
 [j] = [H_{N-j}A^j] : Molar concentration of acid specis (2)
 C_T = [H_NA]_T = \sum_{j=0}^N [j] (4)
 {j} = \gamma_j[j] (5) : activity of acid species j
@@ -45,6 +46,7 @@ k_j = x^j {j} / {0}
 {j} = k_j/x^j {0} \forall j (14) 
 C_T = \sum [j] = [0] \sum_{j=0}^N k_j/x^j (15) mass ballance
 a_j = [j]/C_T (16): ionization fractions
+$$
 
 ## Ionization function
 
