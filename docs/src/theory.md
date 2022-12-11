@@ -1,6 +1,6 @@
 # ChemicalBuffers Theory
 
-The computation is based on the method described in https://www.mdpi.com/2624-8549/3/2/34.
+The computation is based on the method described in https://www.mdpi.com/2624-8549/3/2/34
 
 This is based on activities 
 
@@ -45,6 +45,18 @@ k_j = x^j {j} / {0}
 {j} = k_j/x^j {0} \forall j (14) 
 C_T = \sum [j] = [0] \sum_{j=0}^N k_j/x^j (15) mass ballance
 a_j = [j]/C_T (16): ionization fractions
+
+## Ionization function
+
+We implement equation (17) as function `ionization_fractions_gamma1` and define a plot recipe for BufferComponent using that:
+
+```julia
+using ChemicalBuffers
+using Plots
+plot(plot(acetic_acid), plot(carbonic_acid), plot(citric_acid), plot(phosphoric_acid))
+```
+
+![Fractions1](img/fractions_1.png)
 
 # Appendix
 
