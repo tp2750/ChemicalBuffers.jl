@@ -25,28 +25,31 @@ Overview:
 * §2.5: perspectivation
 * §3: Activities and concentrations?
 * §4: zwitterions
-* Appendix B: Effective concentrations: {j} = \gamma_j[j]
+* Appendix B: Effective concentrations: ``{j} = \gamma_j[j]``
 
 ## Notation
 
 ```math
-[j] = [H_{N-j}A^j] : Molar concentration of acid specis (2)
-C_T = [H_NA]_T = \sum_{j=0}^N [j] (4)
-{j} = \gamma_j[j] (5) : activity of acid species j
-x = {H^+} = 10^{-pH} (6) : activity of H+
-K_w = {H^+}{OH^-} (7)
-K_w = 1.0E-14 @ 25C
-w(x) = [OH^-] - [H^+] = K_w/x - x/\gama_H (8)
-K_a = {H^+}{A^-}/{HA} (10)
-^cK_a = {H^+}[A^-]/[HA] (11)
-pKa = -ln(Ka) (12)
-k_0 = 1
-k_j = \Pi_{i = 1}^j K_i = {H^+}^j{H_{N-j}A^{-j}}/{H_N A} (12)
-k_j = x^j {j} / {0}
-{j} = k_j/x^j {0} \forall j (14) 
-C_T = \sum [j] = [0] \sum_{j=0}^N k_j/x^j (15) mass ballance
-a_j = [j]/C_T (16): ionization fractions
+\begin{aligned}
+[j] &= [H_{N-j}A^j] \hbox{: Molar concentration of acid specis} (2) \\
+C_T &= [H_NA]_T = \sum_{j=0}^N [j] (4) \\
+{j} &= \gamma_j[j] \hbox{: activity of acid species j} (5) \\
+x   &= {H^+} = 10^{-pH}  \hbox{: activity of H+} (6) \\
+K_w &= {H^+}{OH^-} (7) \\
+K_w &= 1.0E-14 \hbox{at 25C} \\
+w(x) &= [OH^-] - [H^+] = K_w/x - x/\gamma_H (8) \\
+K_a &= {H^+}{A^-}/{HA} (10) \\
+{}^cK_a &= {H^+}[A^-]/[HA] (11) \\
+pKa &= -ln(Ka) (12) \\
+k_0 &= 1 \\
+k_j &= \Pi_{i = 1}^j K_i = {H^+}^j{H_{N-j}A^{-j}}/{H_N A} (12) \\
+k_j &= x^j {j} / {0} \\
+{j} &= k_j/x^j {0} \for all j (14)  \\
+C_T &= \sum [j] = [0] \sum_{j=0}^N k_j/x^j (15) \hbox{mass ballance} \\
+a_j &= [j]/C_T (16): \hbox{ionization fractions} \\
+\end{aligned}
 ```
+
 
 
 ## Ionization function
@@ -55,8 +58,9 @@ We implement equation (17) as function `ionization_fractions_gamma1` and define 
 
 
 ```math
-a_j = \left( \frac{k_j}{x^j}\right a_0, a_0 = \left( \sum_{j=0}^N \frac{k_j}{x^j}\right)^{-1}
+a_j = \left( \frac{k_j}{x^j} \right) a_0, a_0 = \left( \sum_{j=0}^N \frac{k_j}{x^j}\right)^{-1}
 ```
+
 
 
 ```julia
