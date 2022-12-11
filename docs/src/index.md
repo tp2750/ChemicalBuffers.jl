@@ -11,6 +11,7 @@ Pages = [
         "index.md",
         "tutorial.md",
         "design.md",
+        "theory.md",
     ]
 ```
 

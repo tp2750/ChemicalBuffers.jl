@@ -18,6 +18,7 @@ makedocs(;
         "Home" => "index.md",
         "Tutorial" => "tutorial.md",
         "Design" => "design.md",
+        "Theory" => "theory.md",
     ],
 )
 
