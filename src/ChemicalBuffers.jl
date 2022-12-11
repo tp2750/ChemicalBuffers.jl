@@ -9,7 +9,7 @@ function ionization_fractions_gamma1(pKa::Vector{T},pH) where T
     Ka = 10. .^(-pKa)
     k_j = [1.; cumprod(Ka)]
     x_j = [1.; cumprod(repeat([x], length(pKa)))]
-    a0 = 1./sum(k_j ./ x_j)
+    a0 = 1. ./sum(k_j ./ x_j)
     a_j = a0 * k_j ./  x_j
     a_j
 end
