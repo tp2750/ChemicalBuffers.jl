@@ -4,9 +4,9 @@ The computation is based on the method described in https://www.mdpi.com/2624-85
 
 This is based on activities 
 
-$$
+```math
 Ka_i = \{H^+\}\{H_{n-i}A^-\}/\{H_nA\}
-$$
+```
 
 
 Notes: (§1.2)
@@ -29,7 +29,7 @@ Overview:
 
 ## Notation
 
-$$
+```math
 [j] = [H_{N-j}A^j] : Molar concentration of acid specis (2)
 C_T = [H_NA]_T = \sum_{j=0}^N [j] (4)
 {j} = \gamma_j[j] (5) : activity of acid species j
@@ -46,11 +46,18 @@ k_j = x^j {j} / {0}
 {j} = k_j/x^j {0} \forall j (14) 
 C_T = \sum [j] = [0] \sum_{j=0}^N k_j/x^j (15) mass ballance
 a_j = [j]/C_T (16): ionization fractions
-$$
+```
+
 
 ## Ionization function
 
-We implement equation (17) as function `ionization_fractions_gamma1` and define a plot recipe for BufferComponent using that:
+We implement equation (17) as function `ionization_fractions_gamma1` and define a plot recipe for BufferComponent using that.
+
+
+```math
+a_j = \left( \frac{k_j}{x^j}\right a_0, a_0 = \left( \sum_{j=0}^N \frac{k_j}{x^j}\right)^{-1}
+```
+
 
 ```julia
 using ChemicalBuffers
